@@ -32,7 +32,7 @@ trait FileHandlerTrait
             return $relative_path;
         }
 
-        $rootDir = dirname(__DIR__, 4);
+        $rootDir = $this->findProjectRoot();
         $fullPath = $rootDir.DIRECTORY_SEPARATOR.$relative_path;
         $segments = preg_split('/[\/\\\\]+/', $fullPath);
         $normalizedSegments = [];
@@ -52,6 +52,30 @@ trait FileHandlerTrait
         $normalizedPath = implode(DIRECTORY_SEPARATOR, $normalizedSegments);
 
         return $this->isWindows() ? $normalizedPath : DIRECTORY_SEPARATOR.$normalizedPath;
+    }
+
+    /**
+     * Find the project root directory
+     * Assumes the trait is in vendor/flexi/contracts/src/Classes/Traits
+     */
+    private function findProjectRoot(): string
+    {
+        // From vendor/flexi/contracts/src/Classes/Traits, go up 6 levels to reach project root
+        $rootDir = dirname(__DIR__, 6);
+
+        // Verify that composer.json exists in this directory
+        if (file_exists($rootDir . DIRECTORY_SEPARATOR . 'composer.json')) {
+            return $rootDir;
+        }
+
+        // Fallback: find vendor directory in the path and go one level up
+        $vendorPos = strpos(__DIR__, DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR);
+        if (false !== $vendorPos) {
+            return substr(__DIR__, 0, $vendorPos);
+        }
+
+        // Last resort: use current working directory
+        return getcwd() ?: __DIR__;
     }
 
     private function isAbsolutePath(string $path): bool
