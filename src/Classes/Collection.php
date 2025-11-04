@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\CollectionInterface;;
-use CubaDevOps\Flexi\Contracts\ValueObjects\CollectionType;
+use Flexi\Contracts\Interfaces\CollectionInterface;;
+use Flexi\Contracts\ValueObjects\CollectionType;
 
 /**
  * @template TKey

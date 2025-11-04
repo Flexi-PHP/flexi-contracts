@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;

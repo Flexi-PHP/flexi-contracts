@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\MessageInterface;;
+use Flexi\Contracts\Interfaces\MessageInterface;;
 use DateTimeImmutable;
 
 class PlainTextMessage implements MessageInterface

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes\Traits;
+namespace Flexi\Contracts\Classes\Traits;
 
 /**
  * Trait for providing information about installed Flexi modules.

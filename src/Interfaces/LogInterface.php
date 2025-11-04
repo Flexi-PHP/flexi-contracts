@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Interfaces;
+namespace Flexi\Contracts\Interfaces;
 
-use CubaDevOps\Flexi\Contracts\ValueObjects\LogLevel;
+use Flexi\Contracts\ValueObjects\LogLevel;
 
 interface LogInterface
 {

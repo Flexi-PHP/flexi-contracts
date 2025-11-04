@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\DTOInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\EventInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\EventListenerInterface;
+use Flexi\Contracts\Interfaces\DTOInterface;
+use Flexi\Contracts\Interfaces\EventInterface;
+use Flexi\Contracts\Interfaces\EventListenerInterface;
 
 abstract class EventListener implements EventListenerInterface
 {

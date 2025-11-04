@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Interfaces;
+namespace Flexi\Contracts\Interfaces;
 
 /**
  * @template TValue

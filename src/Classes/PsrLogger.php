@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
-use CubaDevOps\Flexi\Contracts\Classes\Log;
-use CubaDevOps\Flexi\Contracts\Classes\PlainTextMessage;
-use CubaDevOps\Flexi\Contracts\Interfaces\ConfigurationInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\LogRepositoryInterface;
-use CubaDevOps\Flexi\Contracts\ValueObjects\LogLevel;;
+use Flexi\Contracts\Classes\Log;
+use Flexi\Contracts\Classes\PlainTextMessage;
+use Flexi\Contracts\Interfaces\ConfigurationInterface;
+use Flexi\Contracts\Interfaces\LogRepositoryInterface;
+use Flexi\Contracts\ValueObjects\LogLevel;;
 use Psr\Log\AbstractLogger;
 
 /**

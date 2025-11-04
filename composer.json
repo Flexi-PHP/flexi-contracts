@@ -1,5 +1,5 @@
 {
-  "name": "cubadevops/flexi-contracts",
+  "name": "flexi/contracts",
   "description": "Contracts and PSR dependencies for Flexi Framework - Central interface package",
   "type": "library",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "CubaDevOps\\Flexi\\Contracts\\": "src/"
+      "Flexi\\Contracts\\": "src/"
     }
   }
 }

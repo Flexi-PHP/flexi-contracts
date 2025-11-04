@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes;
+namespace Flexi\Contracts\Classes;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\LogInterface;;
-use CubaDevOps\Flexi\Contracts\Interfaces\MessageInterface;;
-use CubaDevOps\Flexi\Contracts\ValueObjects\LogLevel;
+use Flexi\Contracts\Interfaces\LogInterface;;
+use Flexi\Contracts\Interfaces\MessageInterface;;
+use Flexi\Contracts\ValueObjects\LogLevel;
 
 class Log implements LogInterface
 {

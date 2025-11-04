@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Classes\Criteria;
+namespace Flexi\Contracts\Classes\Criteria;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\CriteriaInterface;
+use Flexi\Contracts\Interfaces\CriteriaInterface;
 
 /**
  * Generic criteria that matches any request without filtering.

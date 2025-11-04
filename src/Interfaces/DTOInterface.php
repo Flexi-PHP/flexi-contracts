@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\Interfaces;
+namespace Flexi\Contracts\Interfaces;
 
 /**
  * Interface for DTOs (Data Transfer Objects)

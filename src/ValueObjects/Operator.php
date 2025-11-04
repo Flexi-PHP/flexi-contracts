@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Contracts\ValueObjects;
+namespace Flexi\Contracts\ValueObjects;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\ValueObjectInterface;
+use Flexi\Contracts\Interfaces\ValueObjectInterface;
 
 class Operator implements ValueObjectInterface
 {
