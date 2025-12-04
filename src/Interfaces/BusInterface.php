@@ -8,7 +8,8 @@ interface BusInterface
 {
     public function register(
         string $identifier,
-        string $handler
+        string $handler,
+        ?string $cli_alias = null
     ): void;
 
     public function execute(DTOInterface $dto);
