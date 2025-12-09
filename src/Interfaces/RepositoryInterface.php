@@ -4,33 +4,36 @@ declare(strict_types=1);
 
 namespace Flexi\Contracts\Interfaces;
 
+use Flexi\Contracts\ValueObjects\ID;
+
 /**
  * Contract for Repository Pattern
  * Standard interface for data persistence.
  */
 interface RepositoryInterface
 {
-
-    public function retrieveValue(CriteriaInterface $criteria): ?ValueObjectInterface;
-
-
     /**
      * Find entity by ID.
      */
-    public function findById($id): ?EntityInterface;
+    public function findById(ID $id): ?EntityInterface;
 
     /**
      * Save entity.
      */
-    public function save(EntityInterface $entity): void;
+    public function save(EntityInterface $entity): bool;
 
     /**
      * Delete entity.
      */
-    public function delete(EntityInterface $entity): void;
+    public function delete(EntityInterface $entity): bool;
 
     /**
-     * Find entities by criteria.
+     * Filter entities by criteria.
      */
-    public function search(CriteriaInterface $criteria): CollectionInterface;
+    public function matching(CriteriaInterface $criteria): iterable;
+
+    /**
+     * Count entities by criteria.
+     */
+    public function count(CriteriaInterface $criteria): int;
 }

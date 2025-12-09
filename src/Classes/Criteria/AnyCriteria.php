@@ -13,13 +13,29 @@ use Flexi\Contracts\Interfaces\CriteriaInterface;
  */
 class AnyCriteria implements CriteriaInterface
 {
-    public function __toString(): string
+
+    public function filters(): Filters
     {
-        return 'AnyCriteria: matches any request';
+        return new Filters([new Filter('*', new FilterOperator('=='), '*')]);
     }
 
-    public function apply($request)
+    public function order(): Order
     {
-        return $request;
+        return new Order('*');
+    }
+
+    public function limit(): ?int
+    {
+        return null;
+    }
+
+    public function offset(): ?int
+    {
+        return null;
+    }
+
+    public function pointer(): ?int
+    {
+        return null;
     }
 }
