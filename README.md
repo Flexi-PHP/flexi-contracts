@@ -41,6 +41,7 @@ composer require flexi/contracts
 The package provides interfaces for all major framework components:
 
 #### **CQRS Pattern**
+
 - `BusInterface` - Command/Query bus abstraction
 - `HandlerInterface` - Handler for commands and queries
 - `DTOInterface` - Data Transfer Object contract
@@ -48,38 +49,45 @@ The package provides interfaces for all major framework components:
 - `MessageInterface` - Message contract for responses
 
 #### **Event Management**
+
 - `EventBusInterface` - Event dispatcher abstraction
 - `EventInterface` - Event contract
 - `EventListenerInterface` - Event listener contract
 
 #### **Data Access**
+
 - `RepositoryInterface` - Generic repository pattern
 - `CriteriaInterface` - Query criteria pattern
 - `EntityInterface` - Domain entity contract
 - `CollectionInterface` - Collection contract
 
 #### **Persistence & Caching**
+
 - `CacheInterface` - Cache abstraction (PSR-16 compatible)
 - `SessionStorageInterface` - Session storage contract
 - `LogRepositoryInterface` - Log persistence contract
 - `LogInterface` - Log entity contract
 
 #### **Configuration**
+
 - `ConfigurationInterface` - Configuration access contract
 - `ConfigurationRepositoryInterface` - Configuration repository contract
 - `SecretProviderInterface` - Secret/credential provider contract
 
 #### **Dependency Injection**
+
 - `ObjectBuilderInterface` - Object builder/factory contract
 - `ServiceDefinitionInterface` - Service definition contract
 - `FactoryInterface` - Generic factory contract
 
 #### **UI & Templates**
+
 - `TemplateEngineInterface` - Template rendering engine
 - `TemplateInterface` - Template representation
 - `TemplateLocatorInterface` - Template discovery
 
 #### **Foundation**
+
 - `ValueObjectInterface` - Value object contract
 
 ### 🏗️ Base Classes (8 implementations)
@@ -95,6 +103,7 @@ Optional abstract and concrete classes for common patterns:
 - `PsrLogger` - PSR-3 logger adapter
 
 #### Criteria Pattern
+
 - `AnyCriteria` - Null object pattern for criteria
 
 ### 💎 Value Objects (6 immutables)
@@ -140,6 +149,7 @@ This package includes and enforces compatibility with:
 ### For Framework Core
 
 The core should:
+
 - ✅ Depend on contracts from this package
 - ✅ Implement interfaces defined here
 - ❌ Never create its own interfaces that modules need
@@ -148,15 +158,17 @@ The core should:
 ### For Modules
 
 Modules should:
+
 - ✅ Depend on contracts from this package
 - ✅ Implement interfaces defined here
 - ✅ Use optional base classes if needed
+- ✅ Declare explicit dependency on other modules in composer.json to resolve automatically and avoid incompatibilities
 - ❌ Never depend on the core directly
-- ❌ Declare explicit dependency on other modules in composer.json to resolve automatically and avoid incompatibilities
 
 ### Optional Usage
 
 All base classes, value objects, and traits are **optional**. You can:
+
 - Use only the interfaces you need
 - Implement your own base classes
 - Create custom value objects
@@ -271,6 +283,7 @@ This package follows [Semantic Versioning](https://semver.org/):
 ## Support
 
 For questions and support:
+
 - Open an issue on [GitHub](https://github.com/CubaDevOps/flexi-contracts/issues)
 - Check the [Flexi Framework documentation](https://github.com/CubaDevOps/flexi/tree/main/docs)
 
