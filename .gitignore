@@ -1,0 +1,49 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.buildpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# PHPUnit
+/phpunit.xml
+.phpunit.result.cache
+/coverage/
+/.phpunit.cache/
+
+# PHP CS Fixer
+.php_cs.cache
+.php-cs-fixer.cache
+
+# PHPStan
+.phpstan.cache
+/phpstan.neon.local
+
+# Psalm
+psalm.xml
+.psalm/
+
+# Build artifacts
+/build/
+/dist/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
