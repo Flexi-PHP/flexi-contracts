@@ -3,6 +3,7 @@
   "description": "Contracts and PSR dependencies for Flexi Framework - Central interface package",
   "type": "library",
   "license": "MIT",
+  "version": "5.0.0",
   "minimum-stability": "stable",
   "require": {
     "php": ">=7.4",
