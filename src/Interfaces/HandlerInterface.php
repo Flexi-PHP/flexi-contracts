@@ -11,9 +11,9 @@ namespace Flexi\Contracts\Interfaces;
 interface HandlerInterface
 {
     /**
-     * Handle a DTO and optionally return a result.
+     * Handle a DTO and return a message result.
      *
-     * @return void|mixed
+     * @return MessageInterface
      */
-    public function handle(DTOInterface $dto);
+    public function handle(DTOInterface $dto): MessageInterface;
 }
