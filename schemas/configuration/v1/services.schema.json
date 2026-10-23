@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:flexi:contracts:configuration:v1:services",
+  "title": "Flexi services configuration",
+  "type": "object",
+  "required": ["services"],
+  "additionalProperties": false,
+  "properties": {
+    "services": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {"type": "object", "required": ["name", "alias"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "alias": {"$ref": "#/$defs/identifier"}}},
+          {"type": "object", "required": ["name", "class"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "class": {"$ref": "#/$defs/classDefinition"}}},
+          {"type": "object", "required": ["name", "factory"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "factory": {"$ref": "#/$defs/factoryDefinition"}}}
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "minLength": 1},
+    "arguments": {"type": "array", "items": {}},
+    "classDefinition": {"type": "object", "required": ["name"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "arguments": {"$ref": "#/$defs/arguments"}}},
+    "factoryDefinition": {"type": "object", "required": ["class", "method"], "additionalProperties": false, "properties": {"class": {"$ref": "#/$defs/identifier"}, "method": {"$ref": "#/$defs/identifier"}, "arguments": {"$ref": "#/$defs/arguments"}}}
+  }
+}

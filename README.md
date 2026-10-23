@@ -223,6 +223,12 @@ class MyEventListener extends EventListener
 
 Event listeners implement `EventListenerInterface` independently from `HandlerInterface`. Their `handle()` method receives an `EventInterface` and returns `void`; command and query handlers continue to return `MessageInterface`.
 
+## Configuration schemas
+
+The versioned JSON Schemas for Flexi module configuration are maintained in [`schemas/configuration/v1/`](schemas/configuration/v1/). This package is the single source of truth; the core and modules should validate against these definitions. Module-specific configuration files may use their own formats and schemas.
+
+The shared schemas cover services, routes, listeners, commands, and queries. The listener schema reflects the grouped event-to-listener-array format used by the published modules.
+
 ## Requirements
 
 - PHP 7.4 or higher

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:flexi:contracts:configuration:v1:listeners",
+  "title": "Flexi listeners configuration",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["event", "listeners"],
+    "additionalProperties": false,
+    "properties": {
+      "event": {"type": "string", "minLength": 1},
+      "listeners": {"type": "array", "items": {"type": "string", "minLength": 1}}
+    }
+  }
+}

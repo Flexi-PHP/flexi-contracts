@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:flexi:contracts:configuration:v1:queries",
+  "title": "Flexi queries configuration",
+  "type": "object",
+  "required": ["handlers"],
+  "additionalProperties": false,
+  "properties": {"handlers": {"type": "array", "items": {"type": "object", "required": ["id", "handler"], "additionalProperties": false, "properties": {"id": {"type": "string", "minLength": 1}, "handler": {"type": "string", "minLength": 1}, "cli_alias": {"type": "string", "minLength": 1}}}}}
+}
