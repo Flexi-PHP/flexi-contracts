@@ -34,6 +34,14 @@ This package includes:
 composer require flexi/contracts
 ```
 
+## Shared configuration schemas
+
+The package is the canonical source for the JSON schemas used by Flexi core and modules. Schemas are stored under `schemas/configuration/v1/`.
+
+Service definitions support explicit decoration through the optional `decorates` service ID. A decorator must have a unique service `name` and pass the reserved `@.inner` argument exactly once to its class or factory. Further decorators must target the preceding decorator ID to form a deterministic chain.
+
+Route definitions support explicit replacement through the optional `overrides` route name. The replacement retains the original route name. Runtime collision policy and diagnostics are implemented by Flexi core.
+
 ## Package Contents
 
 ### 📋 Interfaces (26 contracts)

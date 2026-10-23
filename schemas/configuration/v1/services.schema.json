@@ -11,8 +11,8 @@
       "items": {
         "oneOf": [
           {"type": "object", "required": ["name", "alias"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "alias": {"$ref": "#/$defs/identifier"}}},
-          {"type": "object", "required": ["name", "class"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "class": {"$ref": "#/$defs/classDefinition"}}},
-          {"type": "object", "required": ["name", "factory"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "factory": {"$ref": "#/$defs/factoryDefinition"}}}
+          {"type": "object", "required": ["name", "class"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "class": {"$ref": "#/$defs/classDefinition"}, "decorates": {"$ref": "#/$defs/identifier"}}},
+          {"type": "object", "required": ["name", "factory"], "additionalProperties": false, "properties": {"name": {"$ref": "#/$defs/identifier"}, "factory": {"$ref": "#/$defs/factoryDefinition"}, "decorates": {"$ref": "#/$defs/identifier"}}}
         ]
       }
     }
