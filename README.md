@@ -221,6 +221,8 @@ class MyEventListener extends EventListener
 }
 ```
 
+Event listeners implement `EventListenerInterface` independently from `HandlerInterface`. Their `handle()` method receives an `EventInterface` and returns `void`; command and query handlers continue to return `MessageInterface`.
+
 ## Requirements
 
 - PHP 7.4 or higher

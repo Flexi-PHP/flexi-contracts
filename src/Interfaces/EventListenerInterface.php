@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Flexi\Contracts\Interfaces;
 
-interface EventListenerInterface extends HandlerInterface
+interface EventListenerInterface
 {
-    public function handleEvent(EventInterface $event);
+    public function handle(EventInterface $event): void;
 }
