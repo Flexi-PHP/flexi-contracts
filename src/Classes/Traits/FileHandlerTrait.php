@@ -82,12 +82,12 @@ trait FileHandlerTrait
     {
         if ($this->isUnix()) {
             // Check for Unix absolute paths
-            return str_starts_with($path, '/') || str_starts_with($path, '~');
+            return 0 === strpos($path, '/') || 0 === strpos($path, '~');
         }
 
         if ($this->isWindows()) {
             // Check for Windows absolute paths
-            return preg_match('/^[a-zA-Z]:\\\\/', $path) || str_starts_with($path, '\\\\');
+            return preg_match('/^[a-zA-Z]:\\\\/', $path) || 0 === strpos($path, '\\\\');
         }
 
         return false;
