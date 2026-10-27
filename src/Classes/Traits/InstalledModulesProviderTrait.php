@@ -112,7 +112,7 @@ trait InstalledModulesProviderTrait
      */
     private function isFlexiModulePackage(string $package): bool
     {
-        return str_starts_with($package, $this->getModulePackagePrefix());
+        return 0 === strpos($package, $this->getModulePackagePrefix());
     }
 
     /**
